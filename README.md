@@ -1,0 +1,2 @@
+# VPS-SC
+ NOT FOR SALE
