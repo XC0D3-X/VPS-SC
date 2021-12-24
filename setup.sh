@@ -15,7 +15,7 @@ echo "Script Already Installed"
 exit 0
 fi
 mkdir /var/lib/premium-script;
-echo "Enter the VPS Subdomain Hostname, if not available, please click Enter"
+echo "MASUKKAN DOMAIN ANDA ATAU IP,KALAU TIADA TEKAN ENTER TQ"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/cf.sh && chmod +x cf.sh && ./cf.sh
@@ -62,7 +62,7 @@ history -c
 echo "1.2" > /home/ver
 clear
 echo " "
-echo "Installation has been completed!!"
+echo "DAH SIAP BOSS!!"
 echo " "
 echo "=================================-Autoscript Premium-===========================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
@@ -90,7 +90,7 @@ echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Asia/Singapore (GMT +8)"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/MALAYSIA (GMT +8)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
@@ -105,14 +105,14 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : Haz"  | tee -a log-install.txt
-echo "   - Modded by               : Dragon0193"  | tee -a log-install.txt
-echo "   - Telegram                : t.me/Dragon0949"  | tee -a log-install.txt
+echo "   - Modded by               : ADAMVPN"  | tee -a log-install.txt
+echo "   - Telegram                : t.me/ADAMVPN"  | tee -a log-install.txt
 echo "   - Instagram               : Rahsia sayang"  | tee -a log-install.txt
-echo "   - Whatsapp                : Rahsia sayang"  | tee -a log-install.txt
+echo "   - Whatsapp                : 0184677179"  | tee -a log-install.txt
 echo "   - Facebook                : Rahsia sayang" | tee -a log-install.txt
-echo "------------------Script Created By Dragon0193-----------------" | tee -a log-install.txt
+echo "------------------Script Created By ADAMVPN-----------------" | tee -a log-install.txt
 echo ""
-echo " Reboot 15 Sec"
+echo " Reboot 20 Sec"
 sleep 15
 rm -f setup.sh
 reboot

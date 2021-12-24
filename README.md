@@ -1,5 +1,5 @@
 # VPS-SC
- NOTFORSALE
+ FREE
 
  <h2 align="center">AutoScript Install VPN By Harithwyd <img src="https://img.shields.io/badge/Version-2.0.4-blue.svg"></h2>
 
@@ -45,12 +45,12 @@ src="https://img.shields.io/badge/Service-V2ray-success.svg">  <img src= "https:
   - V2RAY Vless None TLS    : 8880
   - Trojan                  : 2087
 
+PREMIUM SCRIPT FOR FREE
 
 
+## SCRIPT BY :
 
-## Credit :
-
-*   Modded Script by    t.me/Harithwyd
+*   Script by    t.me/ADAMVPN
 
 
-FOR YOU
+SCRIPT BY ADAMVPN

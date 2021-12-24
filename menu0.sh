@@ -4,7 +4,13 @@ cd ..
 cd usr/bin
 clear
 clear
-echo -e ""
+echo -e  " $bl |==============================================================|"
+echo -e  " $nc |             _____          __  ____      _______  _   _      |
+echo -e  " $nc |       /\   |  __ \   /\   |  \/  \ \    / /  __ \| \ | |     |
+echo -e  " $nc |      /  \  | |  | | /  \  | \  / |\ \  / /| |__) |  \| |     |
+echo -e  " $nc |    / ____ \| |__| / ____ \| |  | |  \  /  | |    | |\  |     |
+echo -e  " $nc |   /_/    \_\_____/_/    \_\_|  |_|   \/   |_|    |_| \_|     |
+echo -e  " $bl |-----------------------------------------------------------------
 echo -e "=============================-Menu-============================="
 echo -e "* menu         : List of Main Commands"
 echo -e ""
@@ -96,6 +102,6 @@ echo -e "* update       : Perbarui script"
 echo -e "* info         : Displaying System Information"
 echo -e "* about        : Info Script Auto Install"
 echo -e "* exit         : Exit From VPS "
-echo -e ""
+echo -e ""                SCRIPT BY ADAMVPN
 echo -e "==============================================================="
 echo -e ""
