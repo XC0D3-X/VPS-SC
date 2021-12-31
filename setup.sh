@@ -90,7 +90,7 @@ echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Asia/MALAYSIA (GMT +8)"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/KUALA LUMPUR (GMT +8)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
@@ -104,7 +104,7 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : Haz"  | tee -a log-install.txt
+echo "   - Dev/Main                : ADAM"  | tee -a log-install.txt
 echo "   - Modded by               : ADAMVPN"  | tee -a log-install.txt
 echo "   - Telegram                : t.me/ADAMVPN"  | tee -a log-install.txt
 echo "   - Instagram               : Rahsia sayang"  | tee -a log-install.txt

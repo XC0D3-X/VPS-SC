@@ -11,11 +11,11 @@ ver=$VERSION_ID
 #detail nama perusahaan
 country=MY
 state=Malaysia
-locality=Perak
+locality=Perlis
 organization=unknown
 organizationalunit=unknown
 commonname=unknown
-email=harithsaufi0707@gmail.com
+email=mukhriza291@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/password"
