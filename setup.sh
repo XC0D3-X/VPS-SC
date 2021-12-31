@@ -108,7 +108,7 @@ echo "   - Dev/Main                : info_android9"  | tee -a log-install.txt
 echo "   - Modded by               : info_android9"  | tee -a log-install.txt
 echo "   - Telegram                : t.me/info_android9"  | tee -a log-install.txt
 echo "   - Instagram               : Rahsia sayang"  | tee -a log-install.txt
-echo "   - Whatsapp                : Rahsia sayang"  | tee -a log-install.txt
+echo "   - Whatsapp                : 0128266472"   | tee -a log-install.txt
 echo "   - Facebook                : Rahsia sayang" | tee -a log-install.txt
 echo "------------------Script Created By info_android9-----------------" | tee -a log-install.txt
 echo ""
