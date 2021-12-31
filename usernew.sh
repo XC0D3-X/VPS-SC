@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-echo "By Dragon0193"
+echo "By info_android9"
 clear
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -49,10 +49,11 @@ echo -e "Port SSH WS         : 2082"
 echo -e "Port OVPN WS B      : 2095"
 echo -e "SSL/TLS             :$ssl"
 echo -e "Port Squid          :$sqd"
-echo -e "OpenVPN             : TCP $ovpn http://${ip}:81/client-tcp-1194.ovpn"
-echo -e "OpenVPN             : UDP $ovpn2 http://${ip}:81/client-udp-2200.ovpn"
-echo -e "OpenVPN             : SSL 442 http://${ip}:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN             : TCP $ovpn http://${domain}:81/client-tcp-1194.ovpn"
+echo -e "OpenVPN             : UDP $ovpn2 http://${domain}:81/client-udp-2200.ovpn"
+echo -e "OpenVPN             : SSL 442 http://${domain}:81/client-tcp-ssl.ovpn"
 echo -e "badvpn              : 7100-7300"
+echo -e GANTIKAN DOMAIN DENGAN IP UNTUK DOWNLOAD FILE
 echo -e "==============================="
 echo -e "PAYLOAD SSH WS"
 echo -e "GET / HTTP/1.1[crlf]Host:"

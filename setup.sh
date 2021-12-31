@@ -104,13 +104,13 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : ADAM"  | tee -a log-install.txt
-echo "   - Modded by               : ADAMVPN"  | tee -a log-install.txt
-echo "   - Telegram                : t.me/ADAMVPN"  | tee -a log-install.txt
+echo "   - Dev/Main                : info_android9"  | tee -a log-install.txt
+echo "   - Modded by               : info_android9"  | tee -a log-install.txt
+echo "   - Telegram                : t.me/info_android9"  | tee -a log-install.txt
 echo "   - Instagram               : Rahsia sayang"  | tee -a log-install.txt
-echo "   - Whatsapp                : 0184677179"  | tee -a log-install.txt
+echo "   - Whatsapp                : Rahsia sayang"  | tee -a log-install.txt
 echo "   - Facebook                : Rahsia sayang" | tee -a log-install.txt
-echo "------------------Script Created By ADAMVPN-----------------" | tee -a log-install.txt
+echo "------------------Script Created By info_android9-----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 20 Sec"
 sleep 15

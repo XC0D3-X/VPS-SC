@@ -67,4 +67,3 @@ wget -O /usr/bin/del-sstp https://raw.githubusercontent.com/adamtech323/VPS-SC/m
 wget -O /usr/bin/cek-sstp https://raw.githubusercontent.com/adamtech323/VPS-SC/main/cek-sstp.sh && chmod +x /usr/bin/cek-sstp
 wget -O /usr/bin/renew-sstp https://raw.githubusercontent.com/adamtech323/VPS-SC/main/renew-sstp.sh && chmod +x /usr/bin/renew-sstp
 rm -f /root/sstp.sh
-
