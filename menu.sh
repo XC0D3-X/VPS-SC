@@ -51,7 +51,15 @@ echo -e  " $op ║ \e[032;1mIp Vps:\e[0m$bd $IPVPS"
 echo -e  " $op ║ \e[032;1mCity:\e[0m$bd $CITY"
 echo -e  " $op ║ \e[032;1mTime:\e[0m$bd $WKT "
 
-
+echo -e  "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
+echo -e  "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
+echo -e  "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
+echo -e  "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
+echo -e  "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
+echo -e  "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
+echo -e  "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
+echo -e  "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
+echo -e  "         ░           ░            ░ ░        " |lolcat
 echo -e  "  ╔═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
