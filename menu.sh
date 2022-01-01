@@ -73,6 +73,7 @@ echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
 echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
 echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
 echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
+echo -e  " $nc ║   [8]   -> ->         [Panel xray" | lolcat
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
