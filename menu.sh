@@ -73,26 +73,26 @@ echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
 echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
 echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
 echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
-echo -e  " $nc ║   [8]   -> ->         [Panel xray" | lolcat
+echo -e  " $nc ║   [9]   -> ->         [Panel xray" | lolcat
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e  "  ║"
-echo -e  "  ║      [ 8 ] Add/Change Subdomain Host For VPS"
-echo -e  "  ║      [ 9 ] Add ID Cloudflare"
-echo -e  "  ║      [ 10 ] Cloudflare Add-Ons"
-echo -e  "  ║      [ 11 ] Pointing BUG"
-echo -e  "  ║      [ 12 ] Change Port Of Some Service"
-echo -e  "  ║      [ 13 ] Autobackup Data VPS"
-echo -e  "  ║      [ 14 ] Backup Data VPS"
-echo -e  "  ║      [ 15 ] Restore Data VPS"
-echo -e  "  ║      [ 16 ] Webmin Menu"
-echo -e  "  ║      [ 17 ] Check Usage of VPS Ram"
-echo -e  "  ║      [ 18 ] Reboot VPS"
-echo -e  "  ║      [ 19 ] Speedtest VPS"
-echo -e  "  ║      [ 20 ] Displaying System Information"
-echo -e  "  ║      [ 21 ] Info Script"
+echo -e  "  ║      [ 10 ] Add/Change Subdomain Host For VPS"
+echo -e  "  ║      [ 11 ] Add ID Cloudflare"
+echo -e  "  ║      [ 12 ] Cloudflare Add-Ons"
+echo -e  "  ║      [ 13 ] Pointing BUG"
+echo -e  "  ║      [ 14 ] Change Port Of Some Service"
+echo -e  "  ║      [ 15 ] Autobackup Data VPS"
+echo -e  "  ║      [ 16 ] Backup Data VPS"
+echo -e  "  ║      [ 16 ] Restore Data VPS"
+echo -e  "  ║      [ 17 ] Webmin Menu"
+echo -e  "  ║      [ 18 ] Check Usage of VPS Ram"
+echo -e  "  ║      [ 19 ] Reboot VPS"
+echo -e  "  ║      [ 20 ] Speedtest VPS"
+echo -e  "  ║      [ 21 ] Displaying System Information"
+echo -e  "  ║      [ 22 ] Info Script"
 echo -e  "  ║"
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗\e[m" | lolcat
 echo -e  "  ║ [0] Exit Menu                                                   ║\e[m" | lolcat
