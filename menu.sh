@@ -50,7 +50,7 @@ echo -e  " $op ║ \e[032;1mIsp Name:\e[0m$bd $ISP"
 echo -e  " $op ║ \e[032;1mIp Vps:\e[0m$bd $IPVPS"
 echo -e  " $op ║ \e[032;1mCity:\e[0m$bd $CITY"
 echo -e  " $op ║ \e[032;1mTime:\e[0m$bd $WKT "
-echo -e  " $op ║ \e[032;1mDomain:\e[0m$bd $DMN "
+echo -e  " $op ║ \e[032;1mDomain:\e[0m$bd $Domain "
 
 
 echo -e  "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
@@ -66,13 +66,13 @@ echo -e  "  ╔═════════════════════�
 echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e  " $bl ║"
-echo -e  " $nc ║   {1} =             [SSH & OpenVPN" | lolcat
-echo -e  " $nc ║   {2} =             [Panel Wireguard" | lolcat
-echo -e  " $nc ║   {3} =             [Panel L2TP, PPTP & SSTP" | lolcat
-echo -e  " $nc ║   {4} =             [Panel SSR & SS" | lolcat
-echo -e  " $nc ║   {5} =             [Panel VMESS" | lolcat
-echo -e  " $nc ║   {6} =             [Panel VLESS" | lolcat
-echo -e  " $nc ║   {7} =             [Panel Trojan" | lolcat
+echo -e  " $nc ║   [1]   -> ->         [SSH & OpenVPN" | lolcat
+echo -e  " $nc ║   [2]   -> ->         [Panel Wireguard" | lolcat
+echo -e  " $nc ║   [3]   -> ->         [Panel L2TP, PPTP & SSTP" | lolcat
+echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
+echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
+echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
+echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
