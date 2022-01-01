@@ -50,7 +50,6 @@ echo -e  " $op ║ \e[032;1mIsp Name:\e[0m$bd $ISP"
 echo -e  " $op ║ \e[032;1mIp Vps:\e[0m$bd $IPVPS"
 echo -e  " $op ║ \e[032;1mCity:\e[0m$bd $CITY"
 echo -e  " $op ║ \e[032;1mTime:\e[0m$bd $WKT "
-echo -e  " $op ║ \e[032;1mDomain:\e[0m$bd $Domain "
 
 
 echo -e  "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
