@@ -83,6 +83,11 @@ echo -e "* del-tr       : Deleting Trojan Account"
 echo -e "* renew-tr     : Extending Trojan Account Active Life"
 echo -e "* cek-tr       : Check User Login Trojan"
 echo -e ""
+echo -e "=============================-X-ray-=========================="
+echo -e "* add-xray     : Create XRAY Vless
+echo -e "* del-xray     : Deleting XRAY Vless
+echo -e "* ex-xray      : Extending Vless Account Active Life
+echo -e ""
 echo -e "=============================-SUBDO-=========================="
 echo -e "* add-host     : Tambah Atau Ubah Subdomain Host Untuk VPS"
 echo -e "* cff          : Tambahkan ID Cloudflare"
