@@ -14,10 +14,15 @@ if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
+mkdir /etc/v2ray
+mkdir /etc/xray
 mkdir /var/lib/premium-script;
+mkdir /var/lib/crot-script;
 echo "MASUKKAN DOMAIN ANDA ATAU IP,KALAU TIADA TEKAN ENTER TQ"
 read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
+echo "$host" >> /etc/v2ray/domain
+echo "$host" >> /root/domain
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
@@ -29,6 +34,9 @@ wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/sodosok.sh && chm
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
 wget http://raw.githubusercontent.com/adamtech323/VPS-SC/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+#install xray
+wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/install-xray.sh && chmod +x install-xray.sh && screen -S xray ./install-xray.sh
+
 #install L2TP
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
@@ -39,6 +47,7 @@ rm -f /root/wg.sh
 rm -f /root/ss.sh
 rm -f /root/ssr.sh
 rm -f /root/ins-vt.sh
+rm -f /root/install-xray.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
 cat <<EOF> /etc/systemd/system/autosett.service
@@ -83,6 +92,13 @@ echo "   - SSTP VPN                : 444"  | tee -a log-install.txt
 echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
+echo "   - XRAY VLESS XTLS         : 6060"  | tee -a log-install.txt
+echo "   - XRAY VLESS SPLICE       : 6060"  | tee -a log-install.txt
+echo "   - XRAY VLESS WS XTLS      : 6060"  | tee -a log-install.txt
+echo "   - XRAY VLESS None TCP     : 6666"  | tee -a log-install.txt
+echo "   - XRAY VLESS TCP          : 6565"  | tee -a log-install.txt
+echo "   - XRAY VMESS NONE TCP     : 6464"  | tee -a log-install.txt
+echo "   - XRAY VMESS TCP          : 6363"  | tee -a log-install.txt
 echo "   - V2RAY Vmess TLS         : 8443"  | tee -a log-install.txt
 echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 2083"  | tee -a log-install.txt
