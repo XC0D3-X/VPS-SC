@@ -63,19 +63,19 @@ echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
 echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
 echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
 echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
-echo -e  " $nc ║   [9]   -> ->         [Panel xray" | lolcat
+echo -e  " $nc ║   [8]   -> ->         [Panel xray" | lolcat
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e  "  ║"
-echo -e  "  ║      [ 10 ] Add/Change Subdomain Host For VPS"
-echo -e  "  ║      [ 11 ] Add ID Cloudflare"
-echo -e  "  ║      [ 12 ] Cloudflare Add-Ons"
-echo -e  "  ║      [ 13 ] Pointing BUG"
-echo -e  "  ║      [ 14 ] Change Port Of Some Service"
-echo -e  "  ║      [ 15 ] Autobackup Data VPS"
-echo -e  "  ║      [ 16 ] Backup Data VPS"
+echo -e  "  ║      [ 9 ] Add/Change Subdomain Host For VPS"
+echo -e  "  ║      [ 10 ] Add ID Cloudflare"
+echo -e  "  ║      [ 11 ] Cloudflare Add-Ons"
+echo -e  "  ║      [ 12 ] Pointing BUG"
+echo -e  "  ║      [ 13 ] Change Port Of Some Service"
+echo -e  "  ║      [ 14 ] Autobackup Data VPS"
+echo -e  "  ║      [ 15 ] Backup Data VPS"
 echo -e  "  ║      [ 16 ] Restore Data VPS"
 echo -e  "  ║      [ 17 ] Webmin Menu"
 echo -e  "  ║      [ 18 ] Check Usage of VPS Ram"
@@ -112,49 +112,49 @@ echo -e   ""
    7)
    mtrojan
    ;;
-	 7)
-	 mtrojan
+	 8)
+	 mxray
 	 ;;
-   8)
+   9)
    add-host
    ;;
-   9)
+   10)
    cff
    ;;
-   10)
+   11)
    cfd
    ;;
-   11)
+   12)
    cfh
    ;;
-   12)
+   13)
    change
    ;;
-   13)
+   14)
    autobackup
    ;;
-   14)
+   15)
    backup
    ;;
-   15)
+   16)
    restore
    ;;
-   16)
+   17)
    wbmn
    ;;
-   17)
+   18)
    ram
    ;;
-	 18)
+	 19)
    reboot
    ;;
-	 19)
+	 20)
    speedtest
    ;;
-	 20)
+	 21)
    info
    ;;
-	 21)
+	 22)
    about
    ;;
    0)
