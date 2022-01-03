@@ -1,18 +1,16 @@
 #!/bin/bash
+uuid=$(cat /proc/sys/kernel/random/uuid)
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-
-# // Vless
-vless1="$( cat /etc/xray-mini/vless-direct.json | grep -w port | awk '{print $2}' | sed 's/,//g' )"
-vless2="$( cat /etc/xray-mini/vless-splice.json | grep -w port | awk '{print $2}' | sed 's/,//g' )"
-
+vless1="$(cat ~/log-install.txt | grep -w "XRAY VLESS XTLS" | cut -d: -f2|sed 's/ //g')"
+vless2="$(cat ~/log-install.txt | grep -w "XRAY VLESS SPLICE" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray-mini/vless-direct.json | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/vlessxtls.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -20,46 +18,40 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-
-uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 
 # // Input To Server
-sed -i '/#XRay$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","flow": "xtls-rprx-direct","email": "'""$user""'"' /etc/xray-mini/vless-direct.json
-sed -i '/#XRay$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","flow": "xtls-rprx-splice","email": "'""$user""'"' /etc/xray-mini/vless-splice.json
+sed -i '/#xtls$/a\### '"$user $exp"'\
+},{"id": "'""$uuid""'","flow": "xtls-rprx-direct","email": "'""$user""'"' /etc/xray/vlessxtls.json
+sed -i '/#splice$/a\### '"$user $exp"'\
+},{"id": "'""$uuid""'","flow": "xtls-rprx-splice","email": "'""$user""'"' /etc/xray/vlessplice.json
 
-vless_direct="vless://${uuid}@${domain}:${vless1}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=info_android#$user"
-vless_splice="vless://${uuid}@${domain}:${vless1}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=info_android#$user"
+vless_xtls="vless://${uuid}@${domain}:${vless1}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=bug.com&host=bug.com#$user"
+vless_splice="vless://${uuid}@${domain}:${vless2}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=bug.com&host=bug.com#$user"
 
 # // Restarting Service
-systemctl stop xray-mini@vless-direct
-systemctl stop xray-mini@vless-splice
-systemctl disable xray-mini@vless-direct
-systemctl disable xray-mini@vless-splice
-systemctl enable xray-mini@vless-direct
-systemctl enable xray-mini@vless-splice
-systemctl start xray-mini@vless-direct
-systemctl start xray-mini@vless-splice
-systemctl restart xray-mini@vless-direct
-systemctl restart xray-mini@vless-splice
+systemctl stop xray
+systemctl disable xray
+systemctl enable xray
+systemctl start xray
+systemctl restart xray@vlessxtls
+systemctl restart xray@vlessplice
 
 clear
 echo -e ""
-echo -e "==========-XRAYS/VLESS-=========="
+echo -e "==========-XRAY/VLESS-=========="
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
-echo -e "Port Direct    : $vless1"
-echo -e "Port Splice    : $vless1"
+echo -e "Port XTLS      : $vless1"
+echo -e "Port splice     : $vless2"
 echo -e "id             : ${uuid}"
 echo -e "path           : /xray"
 echo -e "================================="
-echo -e "Link Direct    : ${vless_direct}"
+echo -e "Link DIRECT     : ${vless_xtls}"
 echo -e "================================="
-echo -e "LInk Splice    : ${vless_splice}"
+echo -e "Link SPLICE     : ${vless_splice}"
 echo -e "================================="
-echo -e "Gantikan info_android dengan BUG anda"
-echo -e "================================="
+
 echo -e "Expired On     : $exp"
+echo -e ""
