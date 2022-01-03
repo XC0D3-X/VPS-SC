@@ -1,37 +1,41 @@
 #!/bin/bash
-clear
-echo -e "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
-echo -e "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
-echo -e "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
-echo -e "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
-echo -e "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
-echo -e "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
-echo -e "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
-echo -e "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
-echo -e "         ░           ░            ░ ░        " |lolcat
-echo ""
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray-mini/vless-direct.json")
+	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+		clear
+		echo ""
+		echo "You have no existing clients!"
+		exit 1
+	fi
 
-echo -e "\e[1;31m* [1]\e[0m \e[1;32m: Create XRAY Vless\e[0m"
-echo -e "\e[1;31m* [2]\e[0m \e[1;32m: Deleting XRAY Vless\e[0m"
-echo -e "\e[1;31m* [3]\e[0m \e[1;32m: Extending Vless Account Active Life\e[0m"
-echo -e ""
-echo -e ""
-read -p "        Select From Options [1-3 or x]: " menuxray
-echo -e ""
-case $menuxray in
-1)
-add-xray
-;;
-2)
-del-xray
-;;
-3)
-renew-xray
-;;
-x)
-menu
-;;
-*)
-echo " Please enter an correct number!!"
-;;
-esac
+	clear
+	echo ""
+	echo "Select the existing client you want to renew"
+	echo " Press CTRL+C to return"
+	echo -e "==============================="
+	grep -E "^### " "/etc/xray-mini/vless-direct.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
+		if [[ ${CLIENT_NUMBER} == '1' ]]; then
+			read -rp "Select one client [1]: " CLIENT_NUMBER
+		else
+			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+		fi
+	done
+read -p "Expired (days): " masaaktif
+user=$(grep -E "^### " "/etc/xray-mini/vless-direct.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/etc/xray-mini/vless-direct.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+now=$(date +%Y-%m-%d)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+exp3=$(($exp2 + $masaaktif))
+exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
+sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray-mini/vless-direct.json
+sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray-mini/vless-splice.json
+service cron restart
+clear
+echo ""
+echo " VLESS Account Was Successfully Renewed"
+echo " =========================="
+echo " Client Name : $user"
+echo " Expired On  : $exp4"
+echo " =========================="

@@ -122,6 +122,9 @@ echo -e   ""
    mtrojan
    ;;
    8)
+	 7)
+	 mxray
+	 ;;
    add-host
    ;;
    9)

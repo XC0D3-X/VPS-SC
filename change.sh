@@ -16,6 +16,7 @@ echo -e "     [5]  Tukar Port Vless"
 echo -e "     [6]  Tukar Port Trojan"
 echo -e "     [7]  Tukar Port Squid"
 echo -e "     [8]  Tukar Port SSTP"
+echo -e "     [9]  Change Port XRAY"
 echo -e "     [x]  Exit"
 echo -e "======================================"
 echo -e ""
@@ -45,6 +46,9 @@ port-squid
 ;;
 8)
 port-sstp
+;;
+9)
+port-xray
 ;;
 x)
 clear

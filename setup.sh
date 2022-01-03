@@ -23,23 +23,23 @@ read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 echo "$host" >> /root/domain
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget http://raw.githubusercontent.com/adamtech323/VPS-SC/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget http://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install xray
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/install-xray.sh && chmod +x install-xray.sh && screen -S xray ./install-xray.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/install-xray.sh && chmod +x install-xray.sh && screen -S xray ./install-xray.sh
 
 #install L2TP
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -65,10 +65,12 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/set.sh"
+wget -O /etc/set.sh "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
+echo "echo '             Menu Style by @ADAMVPN            '" >> .profile
+echo "echo '             Repaired by @harithwyd            '" >> .profile
 clear
 echo " "
 echo "DAH SIAP BOSS!!"
@@ -92,13 +94,8 @@ echo "   - SSTP VPN                : 444"  | tee -a log-install.txt
 echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
-echo "   - XRAY VLESS XTLS         : 6060"  | tee -a log-install.txt
-echo "   - XRAY VLESS SPLICE       : 6060"  | tee -a log-install.txt
-echo "   - XRAY VLESS WS XTLS      : 6060"  | tee -a log-install.txt
-echo "   - XRAY VLESS None TCP     : 6666"  | tee -a log-install.txt
-echo "   - XRAY VLESS TCP          : 6565"  | tee -a log-install.txt
-echo "   - XRAY VMESS NONE TCP     : 6464"  | tee -a log-install.txt
-echo "   - XRAY VMESS TCP          : 6363"  | tee -a log-install.txt
+echo "   - XRAY DIRECT             : 6769"  | tee -a log-install.txt
+echo "   - XRAY SPLICE             : 6769"  | tee -a log-install.txt
 echo "   - V2RAY Vmess TLS         : 8443"  | tee -a log-install.txt
 echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 2083"  | tee -a log-install.txt
