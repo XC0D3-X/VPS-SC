@@ -52,15 +52,6 @@ echo -e  " $op ║ \e[032;1mCity:\e[0m$bd $CITY"
 echo -e  " $op ║ \e[032;1mTime:\e[0m$bd $WKT "
 
 
-echo -e  "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
-echo -e  "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
-echo -e  "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
-echo -e  "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
-echo -e  "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
-echo -e  "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
-echo -e  "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
-echo -e  "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
-echo -e  "         ░           ░            ░ ░        " |lolcat
 echo -e  "  ╔═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
@@ -121,10 +112,10 @@ echo -e   ""
    7)
    mtrojan
    ;;
-   8)
 	 7)
-	 mxray
+	 mtrojan
 	 ;;
+   8)
    add-host
    ;;
    9)

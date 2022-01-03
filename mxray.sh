@@ -1,14 +1,6 @@
 #!/bin/bash
 clear
-echo -e "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
-echo -e "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
-echo -e "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
-echo -e "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
-echo -e "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
-echo -e "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
-echo -e "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
-echo -e "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
-echo -e "         ░           ░            ░ ░        " |lolcat
+
 echo -e ""
 echo -e  "  ╔═══════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                      XRAY                     ║" | lolcat
@@ -22,8 +14,9 @@ echo -e  "  ╠═════════════════════�
 echo -e  "  ║ - CTRL C to cancel                            ║" | lolcat
 echo -e  "  ╚═══════════════════════════════════════════════╝" | lolcat
 echo -e "\e[1;32m"
-read -p "     Please select an option :  "  XRAY
-echo -e "\e[0m"case $menuxray in
+read -p "     Please select an option :  " xray
+echo -e "\e[0m"
+case $xray in
 1)
 add-xray
 ;;
