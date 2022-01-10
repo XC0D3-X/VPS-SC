@@ -17,9 +17,12 @@ fi
 mkdir /var/lib/premium-script;
 echo "MASUKKAN DOMAIN ANDA ATAU IP,KALAU TIADA TEKAN ENTER TQ"
 read -p "Hostname / Domain: " host
-echo "V1.0/version brp ikkut sukati" >> /home/version
+echo "IP=$host" >> /var/lib/premium-script/ipvps..conf
+echo  "$host" >> /root/domain
+echo  "$host" >> /etc/v2ray/domain
+echo "V1.0" >> /home/version
 echo "@Adamvpn" >> /home/contact
-echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
+clear
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/adamtech323/VPS-SC/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
@@ -112,7 +115,7 @@ echo "   - Telegram                : t.me/ADAMVPN"  | tee -a log-install.txt
 echo "   - Instagram               : Rahsia sayang"  | tee -a log-install.txt
 echo "   - Whatsapp                : 0184677179"   | tee -a log-install.txt
 echo "   - Facebook                : Rahsia sayang" | tee -a log-install.txt
-echo "------------------Script Created By info_android9-----------------" | tee -a log-install.txt
+echo "------------------Script Created By adam-----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 20 Sec"
 sleep 15

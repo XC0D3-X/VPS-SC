@@ -57,7 +57,7 @@ Sver=$(cat /home/version)
 tele=$(cat /home/contact)
 DAY=$(date +%A)
 DATE=$(date +%m/%d/%Y)
-IPVPS=$(curl -s ipinfo.io/ip
+IPVPS=$(curl -s ipinfo.io/ip )
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
@@ -105,27 +105,27 @@ echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
 echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
 echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
 echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
-echo -e  " $nc ║   [9]   -> ->         [Panel xray" | lolcat
+echo -e  " $nc ║   [9]   -> ->         [Panel XRAY" | lolcat
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
-echo -e  "  ║"
-echo -e  "  ║      [ 10 ] Add/Change Subdomain Host For VPS"
-echo -e  "  ║      [ 11 ] Add ID Cloudflare"
-echo -e  "  ║      [ 12 ] Cloudflare Add-Ons"
-echo -e  "  ║      [ 13 ] Pointing BUG"
-echo -e  "  ║      [ 14 ] Change Port Of Some Service"
-echo -e  "  ║      [ 15 ] Autobackup Data VPS"
-echo -e  "  ║      [ 16 ] Backup Data VPS"
-echo -e  "  ║      [ 16 ] Restore Data VPS"
-echo -e  "  ║      [ 17 ] Webmin Menu"
-echo -e  "  ║      [ 18 ] Check Usage of VPS Ram"
-echo -e  "  ║      [ 19 ] Reboot VPS"
-echo -e  "  ║      [ 20 ] Speedtest VPS"
-echo -e  "  ║      [ 21 ] Displaying System Information"
-echo -e  "  ║      [ 22 ] Info Script"
-echo -e  "  ║"
+echo -e  " $bl ║"
+echo -e  " $nc ║      [ 10 ] Add/Change Subdomain Host For VPS"
+echo -e  " $nc ║      [ 11 ] Add ID Cloudflare"
+echo -e  " $nc ║      [ 12 ] Cloudflare Add-Ons"
+echo -e  " $nc ║      [ 13 ] Pointing BUG"
+echo -e  " $nc ║      [ 14 ] Change Port Of Some Service"
+echo -e  " $nc ║      [ 15 ] Autobackup Data VPS"
+echo -e  " $nc ║      [ 16 ] Backup Data VPS"
+echo -e  " $nc ║      [ 16 ] Restore Data VPS"
+echo -e  " $nc ║      [ 17 ] Webmin Menu"
+echo -e  " $nc ║      [ 18 ] Check Usage of VPS Ram"
+echo -e  " $nc ║      [ 19 ] Reboot VPS"
+echo -e  " $nc ║      [ 20 ] Speedtest VPS"
+echo -e  " $nc ║      [ 21 ] Displaying System Information"
+echo -e  " $nc ║      [ 22 ] Info Script"
+echo -e  " $bl ║"
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗\e[m" | lolcat
 echo -e  "  ║ [0] Exit Menu                                                   ║\e[m" | lolcat
 echo -e  "  ╚═════════════════════════════════════════════════════════════════╝\e[m" | lolcat
