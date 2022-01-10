@@ -24,6 +24,7 @@ wget -O change "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/change
 wget -O port-ovpn "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-ovpn.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-ssl.sh"
 wget -O port-wg "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-wg.sh"
+wget -O port-xray "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-xray.sh
 wget -O port-tr "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-tr.sh"
 wget -O port-sstp "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-sstp.sh"
 wget -O port-squid "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/port-squid.sh"
@@ -33,6 +34,7 @@ wget -O wbmn "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/webmin.s
 wget -O xp "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/xp.sh"
 wget -O limit-speed "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/limit-speed.sh"
 wget -O add-sstp "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/add-sstp.sh"
+wget -O add-xray "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/add-xray.sh"
 wget -O add-ws "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/add-ws.sh"
 wget -O add-vless "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/add-vless.sh"
 wget -O add-tr "https://raw.githubusercontent.com/adamtech323/VPS-SC/main/add-tr.sh"
