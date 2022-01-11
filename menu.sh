@@ -154,52 +154,55 @@ echo -e   ""
    7)
    mtrojan
    ;;
-   8)
+	 8)
+	 mxray
+	 ;;
+   9)
    add-host
    ;;
-   9)
+   10)
    cff
    ;;
-   10)
+   11)
    cfd
    ;;
-   11)
+   12)
    cfh
    ;;
-   12)
+   13)
    change
    ;;
-   13)
+   14)
    autobackup
    ;;
-   14)
+   15)
    backup
    ;;
-   15)
+   16)
    restore
    ;;
-   16)
+   17)
    wbmn
    ;;
-   17)
+   18)
    ram
    ;;
-	 18)
+	 19)
    reboot
    ;;
-	 19)
+	 20)
    speedtest
    ;;
-	 20)
+	 21)
    info
    ;;
-	 21)
+	 22)
    about
    ;;
    0)
    exit
    ;;
    *)
-   echo -e "ERROR!! Please Enter an Correct Number"
+   echo -e "ERROR!! SILA MASUKKAN NOMBOR YANG BENAR"
    ;;
   esac
