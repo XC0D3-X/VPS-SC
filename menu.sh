@@ -11,7 +11,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 clear
 
-yl='\e[32;1m'
+yl='\e[1;32m'
 bl='\e[36;1m'
 gl='\e[32;1m'
 rd='\e[31;1m'
@@ -86,14 +86,14 @@ echo -e  "  ╔═════════════════════�
 echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e  " $bl ║"
-echo -e  " $nc ║   [1]   -> ->         [SSH & OpenVPN" | lolcat
-echo -e  " $nc ║   [2]   -> ->         [Panel Wireguard" | lolcat
-echo -e  " $nc ║   [3]   -> ->         [Panel L2TP, PPTP & SSTP" | lolcat
-echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
-echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
-echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
-echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
-echo -e  " $nc ║   [8]   -> ->         [Panel xray" | lolcat
+echo -e  " $nc ║   [1]   -> ->       $yl  SSH & OpenVPN"
+echo -e  " $nc ║   [2]   -> ->       $yl  Panel Wireguard"
+echo -e  " $nc ║   [3]   -> ->       $yl  Panel L2TP, PPTP & SSTP"
+echo -e  " $nc ║   [5]   -> ->       $yl  Panel VMESS"
+echo -e  " $nc ║   [4]   -> ->       $yl  Panel SSR & SS"
+echo -e  " $nc ║   [6]   -> ->       $yl  Panel VLESS"
+echo -e  " $nc ║   [7]   -> ->       $yl Panel Trojan"
+echo -e  " $nc ║   [8]   -> ->       $yl  Panel xray"
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
