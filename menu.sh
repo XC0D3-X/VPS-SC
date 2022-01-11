@@ -29,29 +29,59 @@ echo -e " "
 echo -e " "
 
 echo -e " "
+# OS Uptime
+uptime="$(uptime -p | cut -d " " -f 2-10)"
+
+# Getting CPU Information
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
+cpu_usage+=" %"
+# Shell Version
+shellversion=""
+shellversion=Bash
+shellversion+=" Version"
+shellversion+=" ${BASH_VERSION/-*}"
+versibash=$shellversion
+# Getting OS Information
+source /etc/os-release
+Versi_OS=$VERSION
+ver=$VERSION_ID
+Tipe=$NAME
+URL_SUPPORT=$HOME_URL
+basedong=$ID
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
+domain=$(cat /etc/v2ray/domain)
+Sver=$(cat /home/version)
+tele=$(cat /home/contact)
+DAY=$(date +%A)
+DATE=$(date +%m/%d/%Y)
 IPVPS=$(curl -s ipinfo.io/ip )
-	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
-	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
-	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
-	tram=$( free -m | awk 'NR==2 {print $2}' )
-	swap=$( free -m | awk 'NR==4 {print $2}' )
-	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 
-
-echo -e  " $bl ║ \e[032;1mCPU Model:\e[0m$bd $cname  "
-echo -e  " $bl ║ \e[032;1mNumber Of Cores:\e[0m$bd $cores"
-echo -e  " $bl ║ \e[032;1mCPU Frequency:\e[0m$bd $freq MHz"
-echo -e  " $bl ║ \e[032;1mTotal Amount Of RAM:\e[0m$bd $tram MB"
-echo -e  " $op ║ \e[032;1mSystem Uptime:\e[0m$bd $up"
-echo -e  " $op ║ \e[032;1mIsp Name:\e[0m$bd $ISP"
-echo -e  " $op ║ \e[032;1mIp Vps:\e[0m$bd $IPVPS"
-echo -e  " $op ║ \e[032;1mCity:\e[0m$bd $CITY"
-echo -e  " $op ║ \e[032;1mTime:\e[0m$bd $WKT "
-
-
+	echo -e "   $green VPS Type             :$NC  $typevps"
+ 	echo -e "   $green CPU Model            :$NC $cname"
+ 	echo -e "   $green CPU Frequency        :$NC $freq MHz"
+ 	echo -e "   $green Number Of Cores      :$NC  $cores"
+ 	echo -e "   $green CPU Usage            :$NC  $cpu_usage"
+ 	echo -e "   $green Operating System     :$NC  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
+ 	echo -e "   $green Kernel               :$NC  `uname -r`"
+ 	echo -e "   $green Total Amount Of RAM  :$NC  $tram MB"
+ 	echo -e "   $green Used RAM             :$NC  $uram MB"
+ 	echo -e "   $green Free RAM             :$NC  $fram MB"
+ 	echo -e "   $green System Uptime        :$NC  $uptime $DF( From VPS Booting )"
+ 	echo -e "   $green Isp Name             :$NC  $ISP"
+ 	echo -e "   $green Domain               :$NC  $domain"
+  echo -e "   $green Ip Vps               :$NC  $IPVPS"
+ 	echo -e "   $green City                 :$NC  $CITY"
+ 	echo -e "   $green Time                 :$NC  $WKT"
+ 	echo -e "   $green Day                  :$NC  $DAY"
+ 	echo -e "   $green Date                 :$NC  $DATE"
+ 	echo -e "   $green Telegram             :$NC  $tele"
+ 	echo -e "   $green Script Version       :$NC  $Sver"
 echo -e  "  ╔═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat

@@ -23,6 +23,8 @@ read -p "Hostname / Domain: " host
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 echo "$host" >> /etc/v2ray/domain
 echo "$host" >> /root/domain
+echo "V1.0" >> /home/version
+echo "@Adamvpn" >> /home/contact
 wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
