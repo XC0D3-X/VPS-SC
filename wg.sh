@@ -88,11 +88,11 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O mwg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/mwg.sh"
-wget -O add-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/patch-1/renew-wg.sh"
+wget -O mwg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/mwg.sh"
+wget -O add-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/renew-wg.sh"
 chmod +x mwg
 chmod +x add-wg
 chmod +x del-wg
