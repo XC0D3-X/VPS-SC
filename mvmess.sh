@@ -10,15 +10,6 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		exit 1
 fi
 clear
-echo -e "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
-echo -e "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
-echo -e "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
-echo -e "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
-echo -e "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
-echo -e "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
-echo -e "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
-echo -e "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
-echo -e "         ░           ░            ░ ░        " |lolcat
 echo ""
 echo -e " ╔═════════════════════════════════════════════╗" | lolcat
 echo -e " ║                     VMESS                   ║" | lolcat

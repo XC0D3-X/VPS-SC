@@ -19,6 +19,7 @@ fi
 
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Client name: " -e CLIENT_NAME
+		read -p "BUG TELCO" :" BUG
 		CLIENT_EXISTS=$(grep -w $CLIENT_NAME /etc/wireguard/wg0.conf | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then

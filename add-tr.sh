@@ -24,6 +24,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 		fi
 	done
 read -p "Expired (days): " masaaktif
+read -p "BUG TELCO" :" BUG
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "### $user $exp" >> /etc/trojan/akun.conf

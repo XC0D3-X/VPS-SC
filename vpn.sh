@@ -42,7 +42,8 @@ PREMIUM SCRIPT BY ADAM
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 1194
+remote bug.domain:1194@bug/
+http-proxy ip 8080
 resolv-retry infinite
 route-method exe
 nobind
@@ -61,7 +62,8 @@ PREMIUM SCRIPT BY ADAM
 client
 dev tun
 proto udp
-remote xxxxxxxxx 2200
+remote bug.domain:2200@bug/
+http-proxy ip 8080
 resolv-retry infinite
 route-method exe
 nobind
@@ -80,8 +82,8 @@ PREMIUM SCRIPT BY ADAM
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 442
-resolv-retry infinite
+remote bug.domain:442@bug/
+http-proxy ip 8080resolv-retry infinite
 route-method exe
 nobind
 persist-key

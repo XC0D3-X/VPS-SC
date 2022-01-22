@@ -1,14 +1,5 @@
 #!/bin/bash
 clear
-echo -e "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
-echo -e "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
-echo -e "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
-echo -e "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
-echo -e "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
-echo -e "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
-echo -e "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
-echo -e "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
-echo -e "         ░           ░            ░ ░        " |lolcat
 echo -e ""
 echo -e  "  ╔═══════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                      XRAY                     ║" | lolcat

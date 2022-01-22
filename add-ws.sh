@@ -25,6 +25,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
+read -p "BUG TELCO" :" BUG
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/config.json
@@ -32,12 +33,12 @@ sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"2"',"email": "'""$user""'"' /etc/v2ray/none.json
 cat>/etc/v2ray/$user-tls.json<<EOF
       {
-      "v": "2",
+      "v": "0",
       "ps": "${user}",
       "add": "${domain}",
       "port": "${tls}",
       "id": "${uuid}",
-      "aid": "2",
+      "aid": "0",
       "net": "ws",
       "path": "/v2ray",
       "type": "none",
@@ -52,7 +53,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "add": "${domain}",
       "port": "${none}",
       "id": "${uuid}",
-      "aid": "2",
+      "aid": "0",
       "net": "ws",
       "path": "/v2ray",
       "type": "none",
@@ -75,7 +76,7 @@ echo -e "Domain         : ${domain}"
 echo -e "port TLS       : ${tls}"
 echo -e "port none TLS  : ${none}"
 echo -e "id             : ${uuid}"
-echo -e "alterId        : 2"
+echo -e "alterId        : 0"
 echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"

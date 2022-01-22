@@ -133,7 +133,7 @@ echo "   - Whatsapp                : 0184677179"   | tee -a log-install.txt
 echo "   - Facebook                : Rahsia sayang" | tee -a log-install.txt
 echo "------------------Script Created By adam-----------------" | tee -a log-install.txt
 echo ""
-echo " Reboot 20 Sec"
+echo " Reboot 15 Sec"
 sleep 15
 rm -f setup.sh
 reboot

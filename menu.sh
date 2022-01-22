@@ -85,15 +85,6 @@ freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 
 
 
-echo -e  "        ██▓ ███▄    █   █████▒▒█████         " |lolcat
-echo -e  "       ▓██▒ ██ ▀█   █ ▓██   ▒▒██▒  ██▒       " |lolcat
-echo -e  "       ▒██▒▓██  ▀█ ██▒▒████ ░▒██░  ██▒       " |lolcat
-echo -e  "       ░██░▓██▒  ▐▌██▒░▓█▒  ░▒██   ██░       " |lolcat
-echo -e  "       ░██░▒██░   ▓██░░▒█░   ░ ████▓▒░       " |lolcat
-echo -e  "        ░▓  ░ ▒░   ▒ ▒  ▒ ░   ░ ▒░▒░▒░       " |lolcat
-echo -e  "         ▒ ░░ ░░   ░ ▒░ ░       ░ ▒ ▒░       " |lolcat
-echo -e  "         ▒ ░   ░   ░ ░  ░ ░   ░ ░ ░ ▒        " |lolcat
-echo -e  "         ░           ░            ░ ░        " |lolcat
 echo -e  "  ╔═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
@@ -105,26 +96,25 @@ echo -e  " $nc ║   [4]   -> ->         [Panel SSR & SS" | lolcat
 echo -e  " $nc ║   [5]   -> ->         [Panel VMESS" | lolcat
 echo -e  " $nc ║   [6]   -> ->         [Panel VLESS" | lolcat
 echo -e  " $nc ║   [7]   -> ->         [Panel Trojan" | lolcat
-echo -e  " $nc ║   [9]   -> ->         [Panel XRAY" | lolcat
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e  " $bl ║"
-echo -e  " $nc ║      [ 10 ] Add/Change Subdomain Host For VPS"
-echo -e  " $nc ║      [ 11 ] Add ID Cloudflare"
-echo -e  " $nc ║      [ 12 ] Cloudflare Add-Ons"
-echo -e  " $nc ║      [ 13 ] Pointing BUG"
-echo -e  " $nc ║      [ 14 ] Change Port Of Some Service"
-echo -e  " $nc ║      [ 15 ] Autobackup Data VPS"
-echo -e  " $nc ║      [ 16 ] Backup Data VPS"
-echo -e  " $nc ║      [ 16 ] Restore Data VPS"
-echo -e  " $nc ║      [ 17 ] Webmin Menu"
-echo -e  " $nc ║      [ 18 ] Check Usage of VPS Ram"
-echo -e  " $nc ║      [ 19 ] Reboot VPS"
-echo -e  " $nc ║      [ 20 ] Speedtest VPS"
-echo -e  " $nc ║      [ 21 ] Displaying System Information"
-echo -e  " $nc ║      [ 22 ] Info Script"
+echo -e  " $nc ║      [ 8 ] Add/Change Subdomain Host For VPS"
+echo -e  " $nc ║      [ 9 ] Add ID Cloudflare"
+echo -e  " $nc ║      [ 10 ] Cloudflare Add-Ons"
+echo -e  " $nc ║      [ 11 ] Pointing BUG"
+echo -e  " $nc ║      [ 12 ] Change Port Of Some Service"
+echo -e  " $nc ║      [ 13 ] Autobackup Data VPS"
+echo -e  " $nc ║      [ 14 ] Backup Data VPS"
+echo -e  " $nc ║      [ 15 ] Restore Data VPS"
+echo -e  " $nc ║      [ 16 ] Webmin Menu"
+echo -e  " $nc ║      [ 17 ] Check Usage of VPS Ram"
+echo -e  " $nc ║      [ 18 ] Reboot VPS"
+echo -e  " $nc ║      [ 19 ] Speedtest VPS"
+echo -e  " $nc ║      [ 20 ] Displaying System Information"
+echo -e  " $nc ║      [ 21 ] Info Script"
 echo -e  " $bl ║"
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗\e[m" | lolcat
 echo -e  "  ║ [0] Exit Menu                                                   ║\e[m" | lolcat
@@ -154,49 +144,47 @@ echo -e   ""
    7)
    mtrojan
    ;;
-	 8)
-	 mxray
 	 ;;
-   9)
+   8)
    add-host
    ;;
-   10)
+   9)
    cff
    ;;
-   11)
+   10)
    cfd
    ;;
-   12)
+   11)
    cfh
    ;;
-   13)
+   12)
    change
    ;;
-   14)
+   13)
    autobackup
    ;;
-   15)
+   14)
    backup
    ;;
-   16)
+   15)
    restore
    ;;
-   17)
+   16)
    wbmn
    ;;
-   18)
+   17)
    ram
    ;;
-	 19)
+	 18)
    reboot
    ;;
-	 20)
+	 21)
    speedtest
    ;;
-	 21)
+	 22)
    info
    ;;
-	 22)
+	 23)
    about
    ;;
    0)
