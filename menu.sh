@@ -92,8 +92,8 @@ echo -e  " $nc ║   [3]   -> ->       $yl  Panel L2TP, PPTP & SSTP"
 echo -e  " $nc ║   [5]   -> ->       $yl  Panel VMESS"
 echo -e  " $nc ║   [4]   -> ->       $yl  Panel SSR & SS"
 echo -e  " $nc ║   [6]   -> ->       $yl  Panel VLESS"
-echo -e  " $nc ║   [7]   -> ->       $yl Panel Trojan"
-echo -e  " $nc ║   [8]   -> ->       $yl  Panel xray"
+echo -e  " $nc ║   [7]   -> ->       $yl  Panel Trojan"
+echo -e  " $nc ║   [8]   -> ->       $yl  Panel Xray"
 echo -e  " $bl ║ "
 echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
 echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
