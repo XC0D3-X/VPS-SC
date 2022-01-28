@@ -44,6 +44,8 @@ fi
 	CLIENT_DNS_2="176.103.130.131"
 	MYIP=$(wget -qO- ifconfig.co);
 	read -p "Expired (days): " masaaktif
+	read -p "BUG TELCO  : " BUG
+uuid=$(cat /proc/sys/kernel/random/uuid)
 	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 
 	# Generate key pair for the client

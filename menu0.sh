@@ -109,6 +109,6 @@ echo -e "* update       : Perbarui script"
 echo -e "* info         : Displaying System Information"
 echo -e "* about        : Info Script Auto Install"
 echo -e "* exit         : Exit From VPS "
-echo -e ""                SCRIPT BY info_android
+echo -e ""                SCRIPT BY adam
 echo -e "==============================================================="
 echo -e ""

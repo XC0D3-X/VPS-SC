@@ -25,13 +25,15 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
+read -p "BUG TELCO  : " BUG
+uuid=$(cat /proc/sys/kernel/random/uuid)
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vless.json
 sed -i '/#none$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/v2ray/vnone.json
-vlesslink1="vless://${uuid}@${domain}:$tls?path=/v2ray&security=tls&encryption=none&type=ws#${user}"
-vlesslink2="vless://${uuid}@${domain}:$none?path=/v2ray&encryption=none&type=ws#${user}"
+vlesslink1="vless://${uuid}@${domain}:$tls?path=/v2ray&security=tls&encryption=none&type=ws&host=${bug}#${user}"
+vlesslink2="vless://${uuid}@${domain}:$none?path=/v2ray&encryption=none&type=ws&host=${bug}#${user}"
 systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
@@ -49,5 +51,6 @@ echo -e "================================="
 echo -e "link TLS       : ${vlesslink1}"
 echo -e "================================="
 echo -e "link none TLS  : ${vlesslink2}"
+echo -e gantikan bug kjepda bug terco yang ingin digunakan
 echo -e "================================="
 echo -e "Expired On     : $exp"

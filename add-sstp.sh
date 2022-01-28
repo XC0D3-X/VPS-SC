@@ -19,6 +19,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 	done
 read -p "Password: " pass
 read -p "Expired (days): " masaaktif
+read -p "BUG TELCO  : " BUG
+uuid=$(cat /proc/sys/kernel/random/uuid)
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 cat >> /home/sstp/sstp_account <<EOF
 $user * $pass *

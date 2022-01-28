@@ -24,11 +24,13 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 		fi
 	done
 read -p "Expired (days): " masaaktif
+read -p "BUG TELCO  : " BUG
+uuid=$(cat /proc/sys/kernel/random/uuid)
 sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
-trojanlink="trojan://${user}@${domain}:${tr}"
+trojanlink="trojan://${user}@${domain}:${tr}?sni=${bug}"
 clear
 echo -e ""
 echo -e "=============-Trojan-============"
@@ -37,5 +39,6 @@ echo -e "Host/IP        : ${domain}"
 echo -e "port           : ${tr}"
 echo -e "Key            : ${user}"
 echo -e "link           : ${trojanlink}"
+echo -e gantikan bug kjepda bug terco yang ingin digunakan
 echo -e "================================="
 echo -e "Expired On     : $exp"

@@ -18,7 +18,7 @@ commonname=unknown
 email=mukhriza291@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -85,14 +85,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -122,7 +122,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -181,10 +181,10 @@ apt -y install tmux
 apt -y install ruby
 gem install lolcat
 apt -y install figlet
-wget -q https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/edu.sh && chmod +x edu.sh && ./edu.sh
+wget -q https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/edu.sh && chmod +x edu.sh && ./edu.sh
 
 #OpenVPN
-wget https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -217,7 +217,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/issue.net"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -240,43 +240,43 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/menu.sh"
-wget -O add-host "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/about.sh"
-wget -O usernew "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/clear-log.sh"
-wget -O change "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-vless.sh"
-wget -O port-xray "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/port-xray.sh"
-wget -O mxray "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/mxray.sh"
-wget -O update "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/update-1.2.sh"
-wget -O wbmn "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/xp.sh"
-wget -O bbr "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/bbr.sh"
-wget -O cfd "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/cfd.sh"
-wget -O cff "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/cff.sh"
-wget -O cfh "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/cfh.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/XC0D3-X/VPS-SC/main/kernel-update.sh"
+wget -O menu "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/menu.sh"
+wget -O add-host "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/about.sh"
+wget -O usernew "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/clear-log.sh"
+wget -O change "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-vless.sh"
+wget -O port-xray "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/port-xray.sh"
+wget -O mxray "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/mxray.sh"
+wget -O update "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/update-1.2.sh"
+wget -O wbmn "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/xp.sh"
+wget -O bbr "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/bbr.sh"
+wget -O cfd "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/cfh.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/SC_VPS/VPS-SC/main/kernel-update.sh"
 chmod +x menu
 chmod +x add-host
 chmod +x usernew
